@@ -68,10 +68,11 @@ def do_calculo_ir(numero_de_meses):
     download_dropbox_file()
     df = get_operations()
 
-    from src.stuff import calcula_custodia
-
     check_tipo_ticker(df)
-    calcula_custodia(df)
+    if config.CALCULAR_CUSTODIA:
+        from src.stuff import calcula_custodia
+        calcula_custodia(df)
+
     calculo_ir = CalculoIr(df=df)
     calculo_ir.calcula()
 

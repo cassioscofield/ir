@@ -26,7 +26,33 @@
     - python3 ./ir.py --do calculo_ir
     - python3 ./ir.py --do importar_negociacoes
 
-   
+## Pré-requisitos técnicos
+
+### Python 3.11 e pip3
+
+- Instalação em Python
+```
+brew install python@3.11
+```
+-  Validação da instalação
+```
+python3 --version
+> 3.11.15
+python3 -m ensurepip --upgrade
+> Looking in links: /tmp/tmp8z_fgg61
+> Requirement already satisfied: setuptools in ./venv/lib/python3.11/site-packages (82.0.1)
+> Requirement already satisfied: pip in ./venv/lib/python3.11/site-packages (26.0.1)
+pip3 --version
+> pip 26.0.1 from /Users/cassio/cassio/ir/venv/lib/python3.11/site-packages/pip (python 3.11)
+```
+
+## Instalar dependências via pip
+```
+python3 -m venv venv
+source venv/bin/activate
+pip3 install -r requirements.txt
+```
+
 ## exemplo do relatorio gerado no seu email
 https://github.com/guilhermecgs/ir/blob/master/exemplo_relatorio_automatico.pdf
 

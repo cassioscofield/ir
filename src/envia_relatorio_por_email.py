@@ -9,6 +9,8 @@ def __smtp_server_config_and_login():
     SMTP_PORT = config.SMTP_PORT
     SMTP_SERVER = config.SMTP_SERVER
 
+    if not config.SMTP_SERVER:
+        return
     server = smtplib.SMTP(SMTP_SERVER, SMTP_PORT)
     server.ehlo()
     server.login(SMTP_USER, SMTP_PASSWORD)
@@ -35,11 +37,13 @@ def envia_relatorio_txt_por_email(assunto, relatorio):
         raise ex
 
 def envia_relatorio_html_por_email(assunto, relatorio_html):
-    SMTP_USER = config.SMTP_USER
+
+    if not config.SMTP_SERVER:
+        return False
 
     msg = MIMEText(relatorio_html, 'html')
     msg['Subject'] = assunto
-    msg['From'] = SMTP_USER
+    msg['From'] = config.SMTP_USER
     to = config.SEND_TO.split(sep=';')
 
     try:

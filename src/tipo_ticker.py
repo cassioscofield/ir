@@ -188,6 +188,20 @@ ticker_map = {
     "BCFF11": TipoTicker.FII,
     "KNIP11": TipoTicker.FII,
     "BBPO11": TipoTicker.FII,
+    "AUAU3": TipoTicker.ACAO_OU_ETF,
+    "WIZC3": TipoTicker.ACAO_OU_ETF,
+    "MILS3": TipoTicker.ACAO_OU_ETF,
+    "ABCB4": TipoTicker.ACAO_OU_ETF,
+    "LFTS11": TipoTicker.ACAO_OU_ETF,
+    "LFTB11": TipoTicker.ACAO_OU_ETF,
+    "NTNS11": TipoTicker.ACAO_OU_ETF,
+    "SNID11": TipoTicker.FII,
+    "BDIF11": TipoTicker.FII,
+    "BTHF11": TipoTicker.FII,
+    "WRLD11": TipoTicker.ACAO_OU_ETF,
+    "CDII11": TipoTicker.ACAO_OU_ETF,
+    "IFRA11": TipoTicker.ACAO_OU_ETF,
+    "JURO11": TipoTicker.ACAO_OU_ETF,
 }
 
 @cachier(stale_after=datetime.timedelta(days=30), cache_dir=CACHE_DIR)
